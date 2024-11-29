@@ -7,8 +7,7 @@ public with sharing class createJob {
         HttpResponse res = new HttpResponse();
         req.setMethod('POST');
         req.setBody(operationInfo);
-        req.setEndpoint('https://sreshta-gollapally-dev-ed.develop.my.salesforce.com/services/data/v61.0/jobs/ingest');
-        req.setHeader('Authorization', 'Bearer 00DdL00000BC2uk!AQEAQFzmjaXsaXuurmDLqhEUJzuxblI55So_OFddeglazEh8ockmr_dxovV6vhrOIeQ6zZV0VHYcj62Oi_QDbPhSUDkjXvha');
+        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/jobs/ingest');
         req.setHeader('Content-Type', 'application/json');
         res= h.send(req);
         system.debug(res.getBody());
@@ -23,8 +22,7 @@ public with sharing class createJob {
         HttpResponse res = new HttpResponse();
         req.setMethod('PUT');
         req.setBody(Body);
-        req.setEndpoint('https://sreshta-gollapally-dev-ed.develop.my.salesforce.com/services/data/v61.0/jobs/ingest/'+jobId+'/batches');
-        req.setHeader('Authorization', 'Bearer 00DdL00000BC2uk!AQEAQFzmjaXsaXuurmDLqhEUJzuxblI55So_OFddeglazEh8ockmr_dxovV6vhrOIeQ6zZV0VHYcj62Oi_QDbPhSUDkjXvha');
+        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/jobs/ingest/'+jobId+'/batches');
         req.setHeader('Content-Type', 'text/csv');
         res= h.send(req);
         system.debug(res);
@@ -39,8 +37,7 @@ public with sharing class createJob {
         req.setBody('{'+
             '"state" : "UploadComplete"'+
            ' }');
-        req.setEndpoint('https://sreshta-gollapally-dev-ed.develop.my.salesforce.com/services/data/v61.0/jobs/ingest/'+jobId);
-        req.setHeader('Authorization', 'Bearer 00DdL00000BC2uk!AQEAQFzmjaXsaXuurmDLqhEUJzuxblI55So_OFddeglazEh8ockmr_dxovV6vhrOIeQ6zZV0VHYcj62Oi_QDbPhSUDkjXvha');
+        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/jobs/ingest/'+jobId);
         req.setHeader('Content-Type', 'application/json');
         res= h.send(req);
         return res.getBody();
@@ -52,8 +49,7 @@ public with sharing class createJob {
         HttpRequest req = new HttpRequest();
         HttpResponse res = new HttpResponse();
         req.setMethod('GET');
-        req.setEndpoint('https://sreshta-gollapally-dev-ed.develop.my.salesforce.com/services/data/v61.0/query/?q=SELECT+QualifiedApiName,IsCustomSetting+FROM+EntityDefinition+where+IsCustomSetting+=+false+order+by+QualifiedApiName');
-        req.setHeader('Authorization', 'Bearer 00DdL00000BC2uk!AQEAQOVngTpJMeJOiDnlNg.OMbwivs8hSrlC056whIvd6NDgBB__vHGurhCk5v2y2O.x0hzLav4HT7HrWE0mhYjps_l4BWPn');
+        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/query/?q=SELECT+QualifiedApiName,IsCustomSetting+FROM+EntityDefinition+where+IsCustomSetting+=+false+order+by+QualifiedApiName');
         req.setHeader('Content-Type', 'application/json');
         res= h.send(req);
         return res.getBody();
