@@ -1,0 +1,11 @@
+<template>
+    <c-navbar></c-navbar>
+    <div class="app">
+        <label>Please enter your Object</label>
+        <lightning-input onchange={changeHandler}></lightning-input>
+        <button class="slds-button slds-button_inverse" onclick={onclickHandler}>Import</button>
+    <template lwc:if={result}>
+        {result}
+    </template>
+</div>
+</template>

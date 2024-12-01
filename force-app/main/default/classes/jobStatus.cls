@@ -17,7 +17,7 @@ public with sharing class jobStatus {
         }
     }
     @AuraEnabled
-    public static MAP<String,String> getResults(String JobId, String State){
+    public static Map<String,String> getResults(String JobId, String State){
         Map<String,String> Results = new Map<String,String>();
         try {
             Http h= new Http();

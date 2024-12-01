@@ -49,7 +49,7 @@ public with sharing class createJob {
         HttpRequest req = new HttpRequest();
         HttpResponse res = new HttpResponse();
         req.setMethod('GET');
-        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/query/?q=SELECT+QualifiedApiName,IsCustomSetting+FROM+EntityDefinition+where+IsCustomSetting+=+false+order+by+QualifiedApiName+limit+300');
+        req.setEndpoint('callout:BulkyNamed'+'/services/data/v61.0/query/?q=SELECT+QualifiedApiName,IsCustomSetting+FROM+EntityDefinition+where+IsCustomSetting+=+false+order+by+QualifiedApiName+limit+100');
         req.setHeader('Content-Type', 'application/json');
         res= h.send(req);
         return res.getBody();

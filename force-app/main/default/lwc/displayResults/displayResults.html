@@ -1,3 +1,11 @@
 <template>
-    {results}
+    <template lwc:if={results}>
+    <h1>Successful records</h1>
+    {results.successfulResults}
+    <h1>Failed records</h1>
+    {results.failedResults}
+    <h1>Unprocessed records</h1>
+    {results.unprocessedrecords}
+    </template>
+
 </template>

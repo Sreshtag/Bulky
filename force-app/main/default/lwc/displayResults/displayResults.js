@@ -2,12 +2,12 @@ import { LightningElement ,api} from 'lwc';
 
 export default class DisplayResults extends LightningElement {
     @api results
-
-    SuccessResults
-    FailedResults
-    ProcessedResults
+    successfulResults
+    failedResults
+    unprocessedrecords
     renderedCallback(){
-        console.log(JSON.stringify(this.results))
+        if(this.results!=undefined){
+            
+        }
     }
-    
 }
