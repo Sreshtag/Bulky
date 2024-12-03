@@ -4,19 +4,22 @@
 }
 
 .app{
-    padding: 20px;
+    min-height: 100vh;
+    padding: 30px;
     background-color: #161b22;
+    color: white;
 }
-
+label{
+    color: white;
+    margin: 5px;
+}
 button{
     margin-bottom: 10px;
 }
 
-lightning-select .slds-select {
-    background-color: black;
-    color: white;
-    --slds-c-select-color-background:black;
+.slds-scrollable_y{
+    height: 500px;
 }
-lightning-textarea {
-    --slds-c-textarea-color-background:black
+.customh1{
+    font-size: 35px;
 }

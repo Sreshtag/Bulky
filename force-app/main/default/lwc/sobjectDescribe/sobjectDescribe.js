@@ -6,6 +6,7 @@ export default class SobjectDescribe extends LightningElement {
     onclickHandler(){
     sobjectDescribe({objectApiName :this.sobject}).then(result=>{
         this.result=JSON.parse(result)
+        console.log(JSON.stringify(this.result))
     }).catch(error=>{
         console.log(error)
     })

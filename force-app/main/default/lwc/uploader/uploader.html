@@ -2,33 +2,39 @@
     <c-navbar></c-navbar>
     <div class="app">
         <template lwc:if={requestState}>
-            <lightning-select name="operation" label="Please Select the Operation" value={operations.value}
-                options={operations} onchange={changeHandler} required></lightning-select>
-            <lightning-select name="object" label="Please Select the Object" value={objects.value} options={objects}
-                onchange={changeHandler} required></lightning-select>
+            <label>Please Select the Operation</label>
+            <lightning-select name="operation" value={operations.value} options={operations} onchange={changeHandler}
+                required></lightning-select>
+            <label>Please Select the Object</label>
+            <lightning-select name="object" value={objects.value} options={objects} onchange={changeHandler}
+                required></lightning-select>
             <template lwc:if={upsert}>
                 <lightning-input name="upsert" onchange={handleupsert} label="externalIdFieldName"
                     placeholder="please enter externalIdFieldName"></lightning-input>
             </template>
-            <lightning-textarea name="Input" label="Please Paste your excel here" placeholder="type here..."
-                value={data} onchange={changeHandler} class="inputs"></lightning-textarea>
+            <label>Please Paste your excel here</label>
+            <lightning-textarea name="Input" placeholder="type here..." value={data} onchange={changeHandler}
+                class="inputs"></lightning-textarea>
             <button class="slds-button slds-button_inverse" onclick={handleOnclick}>Import</button>
-            <lightning-datatable data={dataInTable} columns={columns} hide-checkbox-column="true" key-field="Id"
-                style="overflow:scroll" class="table">
-            </lightning-datatable>
+            <template lwc:if={dataInTable}>
+                <div><label>Input Data</label></div>
+                <lightning-datatable data={dataInTable} columns={columns} hide-checkbox-column="true" key-field="Id"
+                    style="overflow:scroll" class="table">
+                </lightning-datatable>
+            </template>
         </template>
         <template lwc:if={ResponseState}>
             <template lwc:if={JobId}>
-                <h1>Job Id {JobId}</h1>
+                <h1 class="customh1">Job Id {JobId}</h1>
             </template>
             <button class="slds-button slds-button_neutral" onclick={getJobStatus}>Get Status of the Job
             </button>
-            <div>{statusofJob}</div>
+            <div class="customh1">{statusofJob}</div>
             <button class="slds-button slds-button_neutral" onclick={getresult}>Get Results
             </button>
             <c-display-results results={Results}></c-display-results>
             <template lwc:if={errortem}>
-                <h1>Some Error Occured</h1>
+                <h1 class="customh1">Some Error Occured</h1>
             </template>
         </template>
     </div>

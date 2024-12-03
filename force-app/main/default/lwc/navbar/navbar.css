@@ -9,7 +9,6 @@ ul {
   li {
     float: left;
   }
-  
   li a {
     display: block;
     color: white;
@@ -20,4 +19,33 @@ ul {
   
   li a:hover {
     background-color: #111;
+  }
+
+  lightning-accordion-section .slds-accordion__section{
+    padding: 0px;
+  }
+
+  .show-tabs-on-desktop-view{
+    display: block;
+  }
+  .show-accordian-on-mobile-view{
+    display: none;
+    --slds-c-accordion-summary-color-background:black;
+    --slds-c-accordion-heading-text-color : white;
+  }
+  .show-accordian-on-mobile-view a {
+    color: white;
+  }
+  .show-accordian-on-mobile-view div {
+    padding: 10px;
+  }
+  @media (max-width:1024px) {
+    .show-tabs-on-desktop-view{
+      display: none;
+    }
+    .show-accordian-on-mobile-view{
+      display: block;
+      transition: display 2s;
+    }
+    
   }
