@@ -1,0 +1,7 @@
+.app{
+    padding: 30px;
+    background-color: #161b22;
+    color:white;
+    min-height: 100vh;
+    overflow: scroll;
+}
