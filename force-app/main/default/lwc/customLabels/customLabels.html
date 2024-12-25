@@ -2,7 +2,7 @@
     <c-navbar></c-navbar>
     <div class="app">
         <template lwc:if={data}>
-            <div><label>Custom Labels</label></div>
+            <div class="heading"><label>Custom Labels</label></div>
             <lightning-datatable data={data} columns={columns} hide-checkbox-column="true" key-field="Id"
                 style="overflow:scroll" class="table">
             </lightning-datatable>

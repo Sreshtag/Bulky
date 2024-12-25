@@ -46,33 +46,15 @@ export const COLUMNS_DEFINITION_NONWHITELIST = [
 export const EXAMPLES_COLUMNS_DEFINITION_BASIC = [
     {
         type: 'text',
-        fieldName: 'accountName',
-        label: 'Account Name',
+        fieldName: 'keyinJSON',
+        label: 'keyinJSON',
         initialWidth: 300,
     },
     {
-        type: 'number',
-        fieldName: 'employees',
-        label: 'Employees',
-    },
-    {
-        type: 'phone',
-        fieldName: 'phone',
-        label: 'Phone Number',
-    },
-    {
-        type: 'url',
-        fieldName: 'accountOwner',
-        label: 'Account Owner',
-        typeAttributes: {
-            label: { fieldName: 'accountOwnerName' },
-        },
-    },
-    {
         type: 'text',
-        fieldName: 'billingCity',
-        label: 'Billing City',
-    },
+        fieldName: 'valueinJSON',
+        label: 'valueinJSON',
+    }
 ];
 
 /**
@@ -260,152 +242,69 @@ export const DATA_MISSING_CHILDREN_CONTENT = [
  * :: used by examples
  */
 export const EXAMPLES_DATA_BASIC = [
-    {
-        name: '123555',
-        accountName: 'Rewis Inc',
-        employees: 3100,
-        phone: '837-555-0100',
-        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-        accountOwnerName: 'Jane Doe',
-        billingCity: 'Phoeniz, AZ',
-    },
 
-    {
-        name: '123556',
-        accountName: 'Acme Corporation',
-        employees: 10000,
-        phone: '837-555-0100',
-        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-        accountOwnerName: 'John Doe',
-        billingCity: 'San Francisco, CA',
-        _children: [
-            {
-                name: '123556-A',
-                accountName: 'Acme Corporation (Bay Area)',
-                employees: 3000,
-                phone: '837-555-0100',
-                accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                accountOwnerName: 'John Doe',
-                billingCity: 'New York, NY',
-                _children: [
-                    {
-                        name: '123556-A-A',
-                        accountName: 'Acme Corporation (Oakland)',
-                        employees: 745,
-                        phone: '837-555-0100',
-                        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                        accountOwnerName: 'John Doe',
-                        billingCity: 'New York, NY',
-                    },
-                    {
-                        name: '123556-A-B',
-                        accountName: 'Acme Corporation (San Francisco)',
-                        employees: 578,
-                        phone: '837-555-0100',
-                        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                        accountOwnerName: 'Jane Doe',
-                        billingCity: 'Los Angeles, CA',
-                    },
-                ],
-            },
-
-            {
-                name: '123556-B',
-                accountName: 'Acme Corporation (East)',
-                employees: 430,
-                phone: '837-555-0100',
-                accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                accountOwnerName: 'John Doe',
-                billingCity: 'San Francisco, CA',
-                _children: [
-                    {
-                        name: '123556-B-A',
-                        accountName: 'Acme Corporation (NY)',
-                        employees: 1210,
-                        phone: '837-555-0100',
-                        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                        accountOwnerName: 'Jane Doe',
-                        billingCity: 'New York, NY',
-                    },
-                    {
-                        name: '123556-B-B',
-                        accountName: 'Acme Corporation (VA)',
-                        employees: 410,
-                        phone: '837-555-0100',
-                        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                        accountOwnerName: 'John Doe',
-                        billingCity: 'New York, NY',
-                        _children: [
-                            {
-                                name: '123556-B-B-A',
-                                accountName: 'Allied Technologies',
-                                employees: 390,
-                                phone: '837-555-0100',
-                                accountOwner:
-                                    'http://salesforce.com/fake/url/jane-doe',
-                                accountOwnerName: 'Jane Doe',
-                                billingCity: 'Los Angeles, CA',
-                                _children: [
-                                    {
-                                        name: '123556-B-B-A-A',
-                                        accountName: 'Allied Technologies (UV)',
-                                        employees: 270,
-                                        phone: '837-555-0100',
-                                        accountOwner:
-                                            'http://salesforce.com/fake/url/jane-doe',
-                                        accountOwnerName: 'John Doe',
-                                        billingCity: 'San Francisco, CA',
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            },
-        ],
-    },
 
     {
         name: '123557',
-        accountName: 'Rhode Enterprises',
-        employees: 6000,
-        phone: '837-555-0100',
-        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-        accountOwnerName: 'John Doe',
-        billingCity: 'New York, NY',
+        keyinJSON: 'Account Object',
         _children: [
             {
-                name: '123557-A',
-                accountName: 'Rhode Enterprises (UCA)',
-                employees: 2540,
-                phone: '837-555-0100',
-                accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                accountOwnerName: 'John Doe',
-                billingCity: 'New York, NY',
+                name: '123557-1',
+                keyinJSON: 'actionOverrides',
+                _children: [
+                    {
+                        name: '123557-1-1',
+                        keyinJSON: 'formFactor',
+                        valueinJSON : 'LARGE'
+                        
+                    },
+                    {
+                        name: '123557-1-2',
+                        keyinJSON: 'name',
+                        valueinJSON : 'View'
+                    },
+                    {
+                        name: '123557-1-3',
+                        keyinJSON: 'pageId',
+                        valueinJSON : '0M0dM000002NsV2SAK'
+                    }
+                ],
+            },
+            {
+                name: '123557-2',
+                keyinJSON: 'associateEntityType',
+                valueinJSON : false,
+            },
+            {
+                name: '123557-3',
+                keyinJSON: 'associateParentEntity',
+                valueinJSON : false,
+            },
+            {
+                name: '123557-4',
+                keyinJSON: 'childRelationships',
+                _children: [
+                    {
+                        name: '123557-4-1',
+                        keyinJSON: 'cascadeDelete',
+                        valueinJSON : 'true'
+                        
+                    },
+                    {
+                        name: '123557-4-2',
+                        keyinJSON: 'childSObject',
+                        valueinJSON : 'AIInsightValue'
+                    },
+                    {
+                        name: '123557-4-3',
+                        keyinJSON: 'deprecatedAndHidden',
+                        valueinJSON : 'false'
+                    }
+                ],
             },
         ],
     },
 
-    {
-        name: '123558',
-        accountName: 'Tech Labs',
-        employees: 1856,
-        phone: '837-555-0100',
-        accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-        accountOwnerName: 'John Doe',
-        billingCity: 'New York, NY',
-        _children: [
-            {
-                name: '123558-A',
-                accountName: 'Opportunity Resources Inc',
-                employees: 1934,
-                phone: '837-555-0100',
-                accountOwner: 'http://salesforce.com/fake/url/jane-doe',
-                accountOwnerName: 'John Doe',
-                billingCity: 'Los Angeles, CA',
-            },
-        ],
-    },
 ];
 
 /**
@@ -518,3 +417,8 @@ export const EXAMPLES_DATA_LAZY_LOADING = [
         ],
     },
 ];
+
+
+
+
+

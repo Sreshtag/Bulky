@@ -5,3 +5,8 @@
     min-height: 100vh;
     overflow: scroll;
 }
+.heading {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
