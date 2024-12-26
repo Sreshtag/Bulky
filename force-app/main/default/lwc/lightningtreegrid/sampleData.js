@@ -48,7 +48,7 @@ export const EXAMPLES_COLUMNS_DEFINITION_BASIC = [
         type: 'text',
         fieldName: 'keyinJSON',
         label: 'keyinJSON',
-        initialWidth: 300,
+        //initialWidth: 300,
     },
     {
         type: 'text',
@@ -242,61 +242,59 @@ export const DATA_MISSING_CHILDREN_CONTENT = [
  * :: used by examples
  */
 export const EXAMPLES_DATA_BASIC = [
-
-
     {
-        name: '123557',
+        name: '123557-1',
         keyinJSON: 'Account Object',
         _children: [
             {
-                name: '123557-1',
+                name: '123557-1-1',
                 keyinJSON: 'actionOverrides',
                 _children: [
                     {
-                        name: '123557-1-1',
+                        name: '123557-1-1-1',
                         keyinJSON: 'formFactor',
                         valueinJSON : 'LARGE'
                         
                     },
                     {
-                        name: '123557-1-2',
+                        name: '123557-1-1-2',
                         keyinJSON: 'name',
                         valueinJSON : 'View'
                     },
                     {
-                        name: '123557-1-3',
+                        name: '123557-1-1-3',
                         keyinJSON: 'pageId',
                         valueinJSON : '0M0dM000002NsV2SAK'
                     }
                 ],
             },
             {
-                name: '123557-2',
+                name: '123557-1-2',
                 keyinJSON: 'associateEntityType',
                 valueinJSON : false,
             },
             {
-                name: '123557-3',
+                name: '123557-1-3',
                 keyinJSON: 'associateParentEntity',
                 valueinJSON : false,
             },
             {
-                name: '123557-4',
+                name: '123557-1-4',
                 keyinJSON: 'childRelationships',
                 _children: [
                     {
-                        name: '123557-4-1',
+                        name: '123557-1-4-1',
                         keyinJSON: 'cascadeDelete',
                         valueinJSON : 'true'
                         
                     },
                     {
-                        name: '123557-4-2',
+                        name: '123557-1-4-2',
                         keyinJSON: 'childSObject',
                         valueinJSON : 'AIInsightValue'
                     },
                     {
-                        name: '123557-4-3',
+                        name: '123557-1-4-3',
                         keyinJSON: 'deprecatedAndHidden',
                         valueinJSON : 'false'
                     }
