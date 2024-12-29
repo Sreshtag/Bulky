@@ -1,0 +1,20 @@
+.banner {
+    text-align: center;
+    color: white;
+    background-color: black;
+    min-height: 250px;
+    max-height: 300px;
+    padding-top:40px;
+    font-family: Consolas;
+    background-image: url(/sfsites/c/resource/banner);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title{
+    font-size:30px;
+    font-weight: bold;
+}
+.app{
+    background-color: black;
+    color: white;
+}
